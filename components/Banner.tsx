@@ -4,7 +4,7 @@ export default function Banner() {
   return (
     <div className="relative w-full h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh]">
       <Image
-        src="/public/images/gm.jpg"
+        src="/images/gm.jpg"
         alt="EcoStore Banner"
         fill
         style={{ objectFit: 'cover' }}
