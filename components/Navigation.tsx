@@ -1,10 +1,11 @@
 'use client'
 
 import Link from 'next/link'
+import { Button } from './ui/button'
 import { useState } from 'react'
 import { useCart } from '../contexts/CartContext'
 import { Menu, ShoppingCart, X } from 'lucide-react'
-import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -12,7 +13,7 @@ export default function Navigation() {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/gallery', label: 'Gallery' },
+    { href: '/products', label: 'Products' },
     { href: '/about', label: 'About Us' },
     { href: '/custom', label: 'Custom Orders' },
   ]
@@ -47,9 +48,9 @@ export default function Navigation() {
           </Link>
           <Sheet>
             <SheetTrigger asChild>
-              <button className="text-white focus:outline-none">
+              <Button className="text-white focus:outline-none">
                 <Menu size={24} />
-              </button>
+              </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-gray-800 text-white">
               <nav className="flex flex-col h-full">
